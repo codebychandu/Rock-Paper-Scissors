@@ -4,15 +4,15 @@ function play(userChoice) {
     let result = '';
 
     if (userChoice === computerChoice) {
-        result = `It's a tie! Both chose ${userChoice}.`;
+        result = `मैच ड्रा , आप दोनों ने ये पसंद किया  ${userChoice}.`;
     } else if (
         (userChoice === 'rock' && computerChoice === 'scissors') ||
         (userChoice === 'paper' && computerChoice === 'rock') ||
         (userChoice === 'scissors' && computerChoice === 'paper')
     ) {
-        result = `You win! ${userChoice} beats ${computerChoice}.`;
+        result = `आप जीत गए  ${userChoice} हराया  ${computerChoice}.`;
     } else {
-        result = `You lose! ${computerChoice} beats ${userChoice}.`;
+        result = `आप हार गए  ${computerChoice} हराया ${userChoice}.`;
     }
 
     document.getElementById('result').innerText = result;
